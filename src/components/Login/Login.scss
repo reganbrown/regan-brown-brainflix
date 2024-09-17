@@ -1,0 +1,12 @@
+@use "/src/styles/partials/variables" as *;
+@use "/src/styles/partials/mixins" as *;
+@use "/src/styles/partials/typography";
+
+.profile {
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  background: url("/src/assets/Images/Mohan-muruge.jpg");
+  background-size: cover;
+  margin-left: 10px;
+}
