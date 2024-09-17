@@ -7,12 +7,14 @@ import "./Header.scss";
 export default function Header() {
   return (
     <>
-      <Logo />
-      <div className="header__middle">
-        <Search />
-        <Login />
+      <div className="header">
+        <Logo />
+        <div className="header__middle">
+          <Search />
+          <Login />
+        </div>
+        <Upload />
       </div>
-      <Upload />
     </>
   );
 }

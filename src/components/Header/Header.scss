@@ -1,8 +1,16 @@
+@use "/src/styles/partials/variables" as *;
+@use "/src/styles/partials/mixins" as *;
+@use "/src/styles/partials/typography";
+
 .header {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+
   &__middle {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     width: 100%;
-    padding: 20px 0;
+    padding: 16px 0;
   }
 }
