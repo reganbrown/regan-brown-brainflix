@@ -1,4 +1,5 @@
 @use "./typography" as *;
+@use "./variables" as *;
 
 @mixin page-header-desktop {
   font-family: "AvenirNextLTPro";
@@ -70,4 +71,10 @@
   font-weight: bold;
   font-size: 10px;
   line-height: 20px;
+}
+
+@mixin breakpoint-tablet {
+  @media (min-width: $tablet-screen) {
+    @content;
+  }
 }
