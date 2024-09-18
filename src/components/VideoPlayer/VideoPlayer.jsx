@@ -1,19 +1,16 @@
-import videoDetails from "../../data/video-details.json";
 import "./VideoPlayer.scss";
 import viewIcon from "../../assets/Icons/views.svg";
 import likesIcon from "../../assets/Icons/likes.svg";
 
-export default function VideoPlayer() {
-  console.log(videoDetails);
-  const videoNumber = 0;
-  const videoChoice = videoDetails[videoNumber].video;
-  const videoPoster = videoDetails[videoNumber].image;
-  const videoTitle = videoDetails[videoNumber].title;
-  const channel = videoDetails[videoNumber].channel;
-  const views = videoDetails[videoNumber].views;
-  const date = convertDate(videoDetails[videoNumber].timestamp);
-  const likes = videoDetails[videoNumber].likes;
-  const description = videoDetails[videoNumber].description;
+export default function VideoPlayer({ videoDetails }) {
+  const videoChoice = videoDetails[0].video;
+  const videoPoster = videoDetails[0].image;
+  const videoTitle = videoDetails[0].title;
+  const channel = videoDetails[0].channel;
+  const views = videoDetails[0].views;
+  const date = convertDate(videoDetails[0].timestamp);
+  const likes = videoDetails[0].likes;
+  const description = videoDetails[0].description;
 
   function convertDate(ms) {
     const date = new Date(ms);
