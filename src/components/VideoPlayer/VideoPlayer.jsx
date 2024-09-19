@@ -42,6 +42,9 @@ export default function VideoPlayer({ videoDetails }) {
         </div>
       </div>
       <div className="details__description">{description}</div>
+      <div className="details__comments">
+        {videoDetails[0].comments.length} Comments
+      </div>
     </>
   );
 }
