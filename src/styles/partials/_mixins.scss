@@ -35,7 +35,7 @@
 
 @mixin labels-buttons-desktop {
   font-family: "AvenirNextLTPro";
-  font-weight: bold;
+  font-weight: 600;
   font-size: 12px;
   line-height: 20px;
 }
@@ -58,8 +58,8 @@
 
 @mixin subheader-mobile {
   font-family: "AvenirNextLTPro";
-  font-weight: bold;
-  font-size: 13px;
+  font-weight: 600;
+  font-size: 14px;
   line-height: 18px;
 }
 

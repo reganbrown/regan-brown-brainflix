@@ -1,12 +1,33 @@
+@use "/src/styles/partials/variables" as *;
+@use "/src/styles/partials/mixins" as *;
+@use "/src/styles/partials/typography";
+
 .comment {
   display: flex;
-  flex-direction: column;
+  padding: $mobile-padding-standard;
+
+  &__left {
+    width: 20%;
+  }
+
+  &__right {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 
   &__comment {
     padding-bottom: 26px;
+    width: 100%;
   }
   &__name {
     font-weight: 600;
     padding-bottom: 5px;
+    width: 50%;
+  }
+
+  &__date {
+    color: $Silver;
   }
 }

@@ -3,47 +3,55 @@
 @use "/src/styles/partials/typography";
 
 .player {
-  width: 100%;
+  max-width: 100%;
 }
 
 .details {
   display: flex;
   flex-wrap: wrap;
-  padding: 20px 0;
   @include divider;
+  padding: $mobile-padding-standard;
 
   &__header {
     @include divider;
+    @include page-header-mobile;
+    padding: $mobile-padding-standard;
   }
 
   &__channel {
-    font-weight: 600;
-    padding: 10px;
+    @include subheader-mobile;
     width: 50%;
-  }
-  &__views {
-    display: flex;
-    padding: 10px;
-    width: 50%;
-  }
-  &__date {
-    width: 50%;
-    padding: 10px;
-  }
-  &__likes {
-    width: 50%;
-    padding: 10px;
-  }
-  &__icon {
-    width: 25px;
-    height: 25px;
-    margin-right: 10px;
-  }
-  &__description {
     padding-bottom: 16px;
   }
+  &__views {
+    font-size: 13px;
+    color: $Silver;
+    display: flex;
+    align-items: center;
+    width: 50%;
+    padding-bottom: 16px;
+  }
+  &__date {
+    font-size: 13px;
+    color: $Silver;
+    width: 50%;
+  }
+  &__likes {
+    font-size: 13px;
+    color: $Silver;
+    width: 50%;
+    display: flex;
+    align-items: center;
+  }
+  &__icon {
+    margin-right: 8px;
+  }
+  &__description {
+    @include body-copy-mobile;
+    padding: 16px;
+  }
   &__comments {
-    font-weight: 600;
-    padding-bottom: 26px;
+    @include subheader-mobile;
+    padding: 0 16px;
   }
 }

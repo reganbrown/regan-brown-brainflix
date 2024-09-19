@@ -3,41 +3,52 @@
 @use "/src/styles/partials/typography";
 
 .comments {
-  margin-bottom: 26px;
+  margin: $mobile-padding-large $mobile-padding-standard;
+  @include divider;
   &__form {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
   }
   &__button {
+    @include labels-buttons-desktop;
+    margin: $mobile-padding-standard 0;
     width: 100%;
-    min-height: 2.25rem;
-    background-color: black;
-    color: White;
+    background-color: $BrainFlix-Blue;
+    height: 40px;
     border-radius: 4px;
-    align-self: flex-end;
+    border: none;
+    color: $White;
+    background-image: url("../../assets/Icons/add_comment.svg");
+    background-repeat: no-repeat;
+    background-position: 10px center;
     cursor: pointer;
 
     &:hover {
-      background-color: black;
+      background-color: $BrainFlix-DarkBlue;
+      cursor: pointer;
     }
+  }
+
+  &__comment-label {
+    @include section-header-mobile;
+    font-weight: 600;
+    color: $Silver;
   }
 }
 
 .commenter__comment {
+  font-family: "AvenirNextLTPRO";
   min-height: 6.25rem;
   width: 100%;
   border-radius: 4px;
   padding: 0.75rem;
   border: 1px solid $Mercury;
-  background-color: white;
+  background-color: $Alabaster;
+  resize: none;
 
   &::placeholder {
     color: black;
-  }
-
-  @include breakpoint-tablet {
-    padding: 16px;
   }
 }
 

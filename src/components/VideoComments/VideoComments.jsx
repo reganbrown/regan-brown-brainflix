@@ -8,6 +8,7 @@ export default function VideoComments({ videoDetails }) {
         <Comment
           key={comment.id}
           name={comment.name}
+          date={comment.timestamp}
           comment={comment.comment}
         />
       ))}

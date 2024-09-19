@@ -3,14 +3,13 @@ import "./CommentForm.scss";
 export default function CommentfForm() {
   return (
     <section className="comments">
-      <h2 className="comments__title">Join the Conversation</h2>
       <form className="comments__form">
         <div className="form-left">
           <div className="form-left__image"></div>
         </div>
         <div className="form-right">
           <label className="comments__comment-label" for="commentInput">
-            COMMENT
+            JOIN THE CONVERSATION
           </label>
           <textarea
             name="commenterComment"
