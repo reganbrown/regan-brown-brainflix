@@ -3,9 +3,10 @@
   flex-direction: column;
 
   &__comment {
-    padding-bottom: 5px;
+    padding-bottom: 26px;
   }
   &__name {
-    padding-bottom: 25px;
+    font-weight: 600;
+    padding-bottom: 5px;
   }
 }

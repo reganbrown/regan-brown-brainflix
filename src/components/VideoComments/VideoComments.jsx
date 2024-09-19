@@ -7,8 +7,8 @@ export default function VideoComments({ videoDetails }) {
       {commentsList.map((comment) => (
         <Comment
           key={comment.id}
-          comment={comment.comment}
           name={comment.name}
+          comment={comment.comment}
         />
       ))}
     </section>

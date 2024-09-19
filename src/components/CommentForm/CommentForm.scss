@@ -1,0 +1,65 @@
+@use "/src/styles/partials/variables" as *;
+@use "/src/styles/partials/mixins" as *;
+@use "/src/styles/partials/typography";
+
+.comments {
+  margin-bottom: 26px;
+  &__form {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__button {
+    width: 100%;
+    min-height: 2.25rem;
+    background-color: black;
+    color: White;
+    border-radius: 4px;
+    align-self: flex-end;
+    cursor: pointer;
+
+    &:hover {
+      background-color: black;
+    }
+  }
+}
+
+.commenter__comment {
+  min-height: 6.25rem;
+  width: 100%;
+  border-radius: 4px;
+  padding: 0.75rem;
+  border: 1px solid $Mercury;
+  background-color: white;
+
+  &::placeholder {
+    color: black;
+  }
+
+  @include breakpoint-tablet {
+    padding: 16px;
+  }
+}
+
+.form-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 80%;
+}
+
+.form-left {
+  display: flex;
+  width: 20%;
+  justify-content: center;
+
+  &__image {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: $Mercury;
+    background-image: url("../../assets/Images/Mohan-muruge.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+}
