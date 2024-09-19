@@ -1,7 +1,7 @@
 import Comment from "../Comment/Comment";
 
-export default function VideoComments({ videoDetails }) {
-  const commentsList = videoDetails[0].comments;
+export default function VideoComments({ video }) {
+  const commentsList = video.comments;
   return (
     <section className="comments-list">
       {commentsList.map((comment) => (

@@ -2,15 +2,15 @@ import "./VideoPlayer.scss";
 import viewIcon from "../../assets/Icons/views.svg";
 import likesIcon from "../../assets/Icons/likes.svg";
 
-export default function VideoPlayer({ videoDetails }) {
-  const videoChoice = videoDetails[0].video;
-  const videoPoster = videoDetails[0].image;
-  const videoTitle = videoDetails[0].title;
-  const channel = videoDetails[0].channel;
-  const views = videoDetails[0].views;
-  const date = convertDate(videoDetails[0].timestamp);
-  const likes = videoDetails[0].likes;
-  const description = videoDetails[0].description;
+export default function VideoPlayer({ video }) {
+  const videoChoice = video.video;
+  const videoPoster = video.image;
+  const videoTitle = video.title;
+  const channel = video.channel;
+  const views = video.views;
+  const date = convertDate(video.timestamp);
+  const likes = video.likes;
+  const description = video.description;
 
   function convertDate(ms) {
     const date = new Date(ms);
@@ -42,9 +42,7 @@ export default function VideoPlayer({ videoDetails }) {
         </div>
       </div>
       <div className="details__description">{description}</div>
-      <div className="details__comments">
-        {videoDetails[0].comments.length} Comments
-      </div>
+      <div className="details__comments">{video.comments.length} Comments</div>
     </>
   );
 }

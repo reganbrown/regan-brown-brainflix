@@ -1,9 +1,17 @@
 import "./Video.scss";
 
-export default function Video({ video }) {
-  console.log(video);
+export default function Video({ video, videoID }) {
+  function clickHandler() {
+    videoID(video);
+  }
+
   return (
-    <div className="video">
+    <div
+      className="video"
+      onClick={() => {
+        clickHandler();
+      }}
+    >
       <div className="video__left">
         <img src={video.image} className="video__image" />
       </div>
