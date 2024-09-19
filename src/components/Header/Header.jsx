@@ -13,7 +13,7 @@ export default function Header() {
           <Search />
           <Login />
         </div>
-        <Upload />
+        <Upload text="UPLOAD" classChoice="upload" />
       </div>
     </>
   );

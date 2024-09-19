@@ -8,25 +8,24 @@ import CommentForm from "./components/CommentForm/CommentForm";
 import NextVideos from "./components/NextVideos/NextVideos";
 
 function App() {
+  // passes to list of videos to update current video and list on click handler
   function videoID(video) {
     setVideo(video);
-    let restVideos = [];
-    videoDetails.forEach((item) => {
-      if (item != video) {
-        restVideos.push(item);
-      }
+    let restVideos = videoDetails.filter((item) => {
+      return item !== video;
     });
     setVideoList(restVideos);
   }
 
-  let startingVideos = [];
-  videoDetails.forEach((item) => {
-    if (item != videoDetails[0]) {
-      startingVideos.push(item);
-    }
+  // set first video
+  let [video, setVideo] = useState(videoDetails[0]);
+
+  // create starting list of videos minus first video
+  let startingVideos = videoDetails.filter((item) => {
+    return item != video;
   });
 
-  let [video, setVideo] = useState(videoDetails[0]);
+  // set video list using starting list
   let [videoList, setVideoList] = useState(startingVideos);
 
   return (
