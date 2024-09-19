@@ -1,0 +1,8 @@
+@use "/src/styles/partials/variables" as *;
+@use "/src/styles/partials/mixins" as *;
+@use "/src/styles/partials/typography";
+
+.video-list {
+  width: 100%;
+  padding: $mobile-padding-standard;
+}

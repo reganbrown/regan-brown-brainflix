@@ -5,8 +5,11 @@
 .comment {
   display: flex;
   padding: $mobile-padding-standard;
+  @include body-copy-mobile;
 
   &__left {
+    display: flex;
+    justify-content: center;
     width: 20%;
   }
 
@@ -29,5 +32,14 @@
 
   &__date {
     color: $Silver;
+  }
+
+  &__image {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: $Mercury;
+    background-position: center;
+    background-size: cover;
   }
 }

@@ -14,7 +14,9 @@ export default function Comment({ name, date, comment }) {
 
   return (
     <div className="comment">
-      <div className="comment__left"></div>
+      <div className="comment__left">
+        <div className="comment__image"></div>
+      </div>
       <div className="comment__right">
         <div className="comment__name">{name}</div>
         <div className="comment__date">{convertDate(date)}</div>

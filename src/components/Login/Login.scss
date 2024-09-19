@@ -8,10 +8,11 @@
   justify-content: center;
 }
 .profile {
-  height: 36px;
   width: 36px;
+  height: 36px;
   border-radius: 50%;
-  background: url("/src/assets/Images/Mohan-muruge.jpg");
+  background-color: $Mercury;
+  background-image: url("/src/assets/Images/Mohan-muruge.jpg");
+  background-position: center;
   background-size: cover;
-  margin-left: 5px;
 }

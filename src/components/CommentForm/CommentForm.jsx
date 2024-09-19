@@ -8,7 +8,7 @@ export default function CommentfForm() {
           <div className="form-left__image"></div>
         </div>
         <div className="form-right">
-          <label className="comments__comment-label" for="commentInput">
+          <label className="comments__comment-label" htmlFor="commentInput">
             JOIN THE CONVERSATION
           </label>
           <textarea
