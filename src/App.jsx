@@ -10,9 +10,24 @@ import NextVideos from "./components/NextVideos/NextVideos";
 function App() {
   function videoID(video) {
     setVideo(video);
+    let restVideos = [];
+    videoDetails.forEach((item) => {
+      if (item != video) {
+        restVideos.push(item);
+      }
+    });
+    setVideoList(restVideos);
   }
 
+  let startingVideos = [];
+  videoDetails.forEach((item) => {
+    if (item != videoDetails[0]) {
+      startingVideos.push(item);
+    }
+  });
+
   let [video, setVideo] = useState(videoDetails[0]);
+  let [videoList, setVideoList] = useState(startingVideos);
 
   return (
     <>
@@ -20,7 +35,7 @@ function App() {
       <VideoPlayer video={video} />
       <CommentForm />
       <VideoComments video={video} />
-      <NextVideos videoDetails={videoDetails} videoID={videoID} />
+      <NextVideos videoDetails={videoList} videoID={videoID} />
     </>
   );
 }
