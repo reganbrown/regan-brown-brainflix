@@ -13,11 +13,14 @@
 }
 
 .video__left {
-  padding: 8px;
+  padding: $mobile-padding-standard;
   width: 50%;
 }
 
 .video__right {
-  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: $mobile-padding-standard;
   width: 50%;
 }

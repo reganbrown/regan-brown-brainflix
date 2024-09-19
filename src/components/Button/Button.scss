@@ -2,7 +2,7 @@
 @use "/src/styles/partials/mixins" as *;
 @use "/src/styles/partials/typography";
 
-.upload {
+.button-styles {
   @include labels-buttons-desktop;
   width: 100%;
   background-color: $BrainFlix-Blue;
@@ -10,7 +10,6 @@
   border-radius: 4px;
   border: none;
   color: $White;
-  background-image: url("../../assets/Icons/upload.svg");
   background-repeat: no-repeat;
   background-position: 10px center;
   cursor: pointer;
@@ -21,22 +20,13 @@
   }
 }
 
-.newcomment {
-  @include labels-buttons-desktop;
-  width: 100%;
-  margin-top: $mobile-padding-standard;
-  background-color: $BrainFlix-Blue;
-  height: 40px;
-  border-radius: 4px;
-  border: none;
-  color: $White;
-  background-image: url("../../assets/Icons/add_comment.svg");
-  background-repeat: no-repeat;
-  background-position: 10px center;
-  cursor: pointer;
+.upload {
+  @extend .button-styles;
+  background-image: url("../../assets/Icons/upload.svg");
+}
 
-  &:hover {
-    background-color: $BrainFlix-DarkBlue;
-    cursor: pointer;
-  }
+.newcomment {
+  @extend .button-styles;
+  margin-top: $mobile-padding-standard;
+  background-image: url("../../assets/Icons/add_comment.svg");
 }
