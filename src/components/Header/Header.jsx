@@ -1,6 +1,6 @@
 import Logo from "../Logo/Logo";
 import Search from "../Search/Search";
-import Upload from "../Upload/Upload";
+import Button from "../Button/Button";
 import Login from "../Login/Login";
 import "./Header.scss";
 
@@ -13,7 +13,7 @@ export default function Header() {
           <Search />
           <Login />
         </div>
-        <Upload text="UPLOAD" classChoice="upload" />
+        <Button text="UPLOAD" classChoice="upload" />
       </div>
     </>
   );

@@ -1,3 +1,7 @@
+@use "/src/styles/partials/variables" as *;
+@use "/src/styles/partials/mixins" as *;
+@use "/src/styles/partials/typography";
+
 .video {
   width: 100%;
   display: flex;
@@ -5,12 +9,15 @@
 
 .video__image {
   width: 100%;
+  border-radius: 4px;
 }
 
 .video__left {
+  padding: 8px;
   width: 50%;
 }
 
 .video__right {
+  padding: 8px;
   width: 50%;
 }

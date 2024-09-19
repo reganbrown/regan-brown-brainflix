@@ -1,6 +1,6 @@
-import "./Upload.scss";
+import "./Button.scss";
 
-export default function Upload({ text, classChoice }) {
+export default function Button({ text, classChoice }) {
   return (
     <>
       <button type="button" className={classChoice}>

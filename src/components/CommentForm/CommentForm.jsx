@@ -1,5 +1,5 @@
 import "./CommentForm.scss";
-import Upload from "../Upload/Upload";
+import Button from "../Button/Button";
 
 export default function CommentfForm() {
   return (
@@ -19,7 +19,7 @@ export default function CommentfForm() {
             placeholder="Add a new comment"
             required
           ></textarea>
-          <Upload text="COMMENT" classChoice="newcomment" />
+          <Button text="COMMENT" classChoice="newcomment" />
         </div>
       </form>
     </section>

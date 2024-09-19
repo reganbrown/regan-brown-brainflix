@@ -24,6 +24,7 @@
 .newcomment {
   @include labels-buttons-desktop;
   width: 100%;
+  margin-top: $mobile-padding-standard;
   background-color: $BrainFlix-Blue;
   height: 40px;
   border-radius: 4px;
