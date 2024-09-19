@@ -1,0 +1,11 @@
+.comment {
+  display: flex;
+  flex-direction: column;
+
+  &__comment {
+    padding-bottom: 5px;
+  }
+  &__name {
+    padding-bottom: 25px;
+  }
+}

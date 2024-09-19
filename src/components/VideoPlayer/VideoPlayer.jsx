@@ -41,7 +41,7 @@ export default function VideoPlayer({ videoDetails }) {
           {likes}
         </div>
       </div>
-      <div>{description}</div>
+      <div className="details__description">{description}</div>
     </>
   );
 }
