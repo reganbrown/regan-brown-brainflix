@@ -6,7 +6,7 @@ export default function Video({ video, videoID }) {
   }
 
   return (
-    <div
+    <a
       className="video"
       onClick={() => {
         clickHandler();
@@ -19,6 +19,6 @@ export default function Video({ video, videoID }) {
         <div>{video.title} </div>
         <div>{video.channel}</div>
       </div>
-    </div>
+    </a>
   );
 }

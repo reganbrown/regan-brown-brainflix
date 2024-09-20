@@ -1,8 +1,5 @@
-# React + Vite
+# BrainFlix
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A react project youtube-like clone currently in sprint-1 of development. Utilizing useState, components, and props to create a basic ui that updates the current video along with it's details and comments, and populates a list of "next videos" from a json file.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Future sprints will update from static content to dynamic content through an API, and add functionality around uploading new videos, adding comments, and searching for videos.

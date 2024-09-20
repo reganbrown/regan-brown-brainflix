@@ -1,6 +1,7 @@
 import "./VideoPlayer.scss";
 import viewIcon from "../../assets/Icons/views.svg";
 import likesIcon from "../../assets/Icons/likes.svg";
+import TimeConvert from "../../utilities/TimeConvert/TimeConvert";
 
 export default function VideoPlayer({ video }) {
   const videoChoice = video.video;
@@ -8,20 +9,9 @@ export default function VideoPlayer({ video }) {
   const videoTitle = video.title;
   const channel = video.channel;
   const views = video.views;
-  const date = convertDate(video.timestamp);
+  const date = TimeConvert(video.timestamp);
   const likes = video.likes;
   const description = video.description;
-
-  function convertDate(ms) {
-    const date = new Date(ms);
-
-    let day = date.getDate();
-    let month = date.getMonth() + 1;
-    let year = date.getFullYear();
-
-    let currentDate = `${month}/${day}/${year}`;
-    return currentDate;
-  }
 
   return (
     <>
