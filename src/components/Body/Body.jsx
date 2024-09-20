@@ -7,7 +7,7 @@ import NextVideos from "../NextVideos/NextVideos";
 
 export default function Body() {
   // passes to list of videos to update current video and list on click handler
-  function videoID(video) {
+  function handleVideoID(video) {
     setVideo(video);
     let restVideos = videoDetails.filter((item) => {
       return item !== video;
@@ -31,7 +31,7 @@ export default function Body() {
       <VideoPlayer video={video} />
       <CommentForm />
       <VideoComments video={video} />
-      <NextVideos videoDetails={videoList} videoID={videoID} />
+      <NextVideos videoDetails={videoList} handleVideoID={handleVideoID} />
     </>
   );
 }

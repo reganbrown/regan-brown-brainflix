@@ -1,8 +1,8 @@
 import "./Video.scss";
 
-export default function Video({ video, videoID }) {
+export default function Video({ video, handleVideoID }) {
   function clickHandler() {
-    videoID(video);
+    handleVideoID(video);
   }
 
   return (
