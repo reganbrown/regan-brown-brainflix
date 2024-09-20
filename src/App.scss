@@ -1,8 +1,3 @@
 @use "./styles/partials/typography" as *;
 @use "./styles/partials/mixins" as *;
 @use "./styles/partials/global";
-
-body {
-  margin: 0;
-  font-family: "AvenirNextLTPro";
-}

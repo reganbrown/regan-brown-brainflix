@@ -5,4 +5,11 @@
 .video-list {
   width: 100%;
   padding: $mobile-padding-standard;
+
+  &__label {
+    @include section-header-mobile;
+    font-weight: 600;
+    color: $Silver;
+    padding-bottom: $mobile-padding-standard;
+  }
 }

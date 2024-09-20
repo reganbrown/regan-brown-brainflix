@@ -16,7 +16,7 @@ export default function Video({ video, videoID }) {
         <img src={video.image} className="video__image" />
       </div>
       <div className="video__right">
-        <div>{video.title} </div>
+        <div className="video__title">{video.title} </div>
         <div>{video.channel}</div>
       </div>
     </a>
