@@ -17,7 +17,7 @@ export default function Video({ video, handleVideoID }) {
       </div>
       <div className="video__right">
         <div className="video__title">{video.title} </div>
-        <div>{video.channel}</div>
+        <div className="video__channel">{video.channel}</div>
       </div>
     </a>
   );

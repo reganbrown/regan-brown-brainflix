@@ -6,13 +6,14 @@
   width: 20%;
   display: flex;
   justify-content: center;
-}
-.profile {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background-color: $Mercury;
-  background-image: url("/src/assets/Images/Mohan-muruge.jpg");
-  background-position: center;
-  background-size: cover;
+
+  &__profile {
+    width: $image-mobile;
+    height: $image-mobile;
+    border-radius: $half;
+    background-color: $Mercury;
+    background-image: url("/src/assets/Images/Mohan-muruge.jpg");
+    background-position: center;
+    background-size: cover;
+  }
 }

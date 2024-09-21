@@ -3,13 +3,13 @@
 @use "/src/styles/partials/typography";
 
 .video {
-  width: 100%;
+  width: $full;
   display: flex;
   padding-bottom: $mobile-padding-standard;
 
   &__image {
-    width: 100%;
-    border-radius: 4px;
+    width: $full;
+    border-radius: $rounded-corner;
   }
 
   &__left {

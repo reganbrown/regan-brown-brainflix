@@ -2,54 +2,55 @@
 @use "/src/styles/partials/mixins" as *;
 @use "/src/styles/partials/typography";
 
-.comments {
-  padding: $mobile-padding-standard;
-  @include divider;
-  &__form {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
+.comment-form {
+  width: $full;
+  display: flex;
+  flex-wrap: wrap;
+
+  &__wrapper {
+    padding: $mobile-padding-standard;
+    @include divider;
   }
 
-  &__comment-label {
+  &__label {
     @include section-header-mobile;
     font-weight: 600;
     color: $Silver;
   }
-}
 
-.commenter__comment {
-  font-family: "AvenirNextLTPro";
-  min-height: 6.25rem;
-  width: 100%;
-  border-radius: 4px;
-  padding: 0.75rem;
-  border: 1px solid $Mercury;
-  background-color: $Alabaster;
-  resize: none;
+  &__comment {
+    font-family: "AvenirNextLTPro";
+    min-height: 6.25rem;
+    width: $full;
+    border-radius: $rounded-corner;
+    padding: 0.75rem;
+    border: 1px solid $Mercury;
+    background-color: $Alabaster;
+    resize: none;
 
-  &::placeholder {
-    color: black;
+    &::placeholder {
+      color: black;
+    }
   }
-}
 
-.form-right {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 80%;
-}
+  &__right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 80%;
+  }
 
-.form-left {
-  display: flex;
-  width: 20%;
-  justify-content: center;
+  &__left {
+    display: flex;
+    width: 20%;
+    justify-content: center;
+  }
 
   &__image {
     margin-top: $mobile-padding-large;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
+    width: $image-mobile;
+    height: $image-mobile;
+    border-radius: $half;
     background-color: $Mercury;
     background-image: url("../../assets/Images/Mohan-muruge.jpg");
     background-position: center;

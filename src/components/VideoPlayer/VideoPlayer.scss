@@ -3,7 +3,7 @@
 @use "/src/styles/partials/typography";
 
 .player {
-  max-width: 100%;
+  max-width: $full;
 }
 
 .details {
@@ -20,38 +20,38 @@
 
   &__channel {
     @include subheader-mobile;
-    width: 50%;
-    padding-bottom: 16px;
+    width: $half;
+    padding-bottom: $mobile-padding-standard;
   }
   &__views {
     font-size: 13px;
     color: $Silver;
     display: flex;
     align-items: center;
-    width: 50%;
-    padding-bottom: 16px;
+    width: $half;
+    padding-bottom: $mobile-padding-standard;
   }
   &__date {
     font-size: 13px;
     color: $Silver;
-    width: 50%;
+    width: $half;
   }
   &__likes {
     font-size: 13px;
     color: $Silver;
-    width: 50%;
+    width: $half;
     display: flex;
     align-items: center;
   }
   &__icon {
-    margin-right: 8px;
+    margin-right: $mobile-padding-half;
   }
   &__description {
     @include body-copy-mobile;
-    padding: 16px;
+    padding: $mobile-padding-standard;
   }
   &__comments {
     @include subheader-mobile;
-    padding: 0 16px;
+    padding: 0 $mobile-padding-standard;
   }
 }

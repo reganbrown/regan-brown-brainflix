@@ -3,7 +3,7 @@
 @use "/src/styles/partials/typography";
 
 .video-list {
-  width: 100%;
+  width: $full;
   padding: $mobile-padding-standard;
 
   &__label {

@@ -2,12 +2,12 @@
 @use "/src/styles/partials/mixins" as *;
 @use "/src/styles/partials/typography";
 
-.button-styles {
+.button {
   @include labels-buttons-desktop;
-  width: 100%;
+  width: $full;
   background-color: $BrainFlix-Blue;
-  height: 40px;
-  border-radius: 4px;
+  height: $button-height;
+  border-radius: $rounded-corner;
   border: none;
   color: $White;
   background-repeat: no-repeat;
@@ -20,13 +20,13 @@
   }
 }
 
-.upload {
-  @extend .button-styles;
+.button__upload {
+  @extend .button;
   background-image: url("../../assets/Icons/upload.svg");
 }
 
-.newcomment {
-  @extend .button-styles;
+.button__comment {
+  @extend .button;
   margin-top: $mobile-padding-standard;
   background-image: url("../../assets/Icons/add_comment.svg");
 }

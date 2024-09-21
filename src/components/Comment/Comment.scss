@@ -8,27 +8,27 @@
   @include divider;
   @include body-copy-mobile;
 
-  &__left {
+  &__wrapper-left {
     display: flex;
     justify-content: center;
     width: 20%;
   }
 
-  &__right {
+  &__wrapper-right {
     width: 80%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
 
-  &__comment {
-    padding-bottom: 8px;
-    width: 100%;
+  &__content {
+    padding-bottom: $mobile-padding-half;
+    width: $full;
   }
   &__name {
     font-weight: 600;
     padding-bottom: 5px;
-    width: 50%;
+    width: $half;
   }
 
   &__date {
@@ -36,9 +36,9 @@
   }
 
   &__image {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
+    width: $image-mobile;
+    height: $image-mobile;
+    border-radius: $half;
     background-color: $Mercury;
     background-position: center;
     background-size: cover;
