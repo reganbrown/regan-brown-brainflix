@@ -6,6 +6,7 @@
   width: $full;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 
   &__wrapper {
     padding: $mobile-padding-standard;
@@ -37,12 +38,11 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 80%;
+    width: calc(100% - 50px);
   }
 
   &__left {
     display: flex;
-    width: 20%;
     justify-content: center;
   }
 
@@ -55,5 +55,32 @@
     background-image: url("../../assets/Images/Mohan-muruge.jpg");
     background-position: center;
     background-size: cover;
+  }
+
+  @include breakpoint-tablet {
+    padding: $desktop-padding-standard;
+
+    &__right {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &__label {
+      width: $full;
+    }
+    &__comment {
+      width: calc(98% - 150px);
+      min-height: 0;
+      height: 45px;
+    }
+    &__wrapper {
+      padding: 0;
+    }
+
+    &__image {
+      width: $image-desktop;
+      height: $image-desktop;
+    }
   }
 }

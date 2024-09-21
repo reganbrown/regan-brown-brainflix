@@ -23,10 +23,20 @@
 .button__upload {
   @extend .button;
   background-image: url("../../assets/Icons/upload.svg");
+
+  @include breakpoint-tablet {
+    margin-top: 0;
+    width: 150px;
+  }
 }
 
 .button__comment {
   @extend .button;
   margin-top: $mobile-padding-standard;
   background-image: url("../../assets/Icons/add_comment.svg");
+
+  @include breakpoint-tablet {
+    margin-top: 0;
+    width: 150px;
+  }
 }

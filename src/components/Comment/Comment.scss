@@ -4,6 +4,7 @@
 
 .comment {
   display: flex;
+  justify-content: space-between;
   padding: 8px $mobile-padding-standard;
   @include divider;
   @include body-copy-mobile;
@@ -11,11 +12,10 @@
   &__wrapper-left {
     display: flex;
     justify-content: center;
-    width: 20%;
   }
 
   &__wrapper-right {
-    width: 80%;
+    width: calc(100% - 50px);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -42,5 +42,15 @@
     background-color: $Mercury;
     background-position: center;
     background-size: cover;
+  }
+
+  @include breakpoint-tablet {
+    padding: $desktop-padding-standard;
+    @include body-copy-desktop;
+
+    &__image {
+      width: $image-desktop;
+      height: $image-desktop;
+    }
   }
 }

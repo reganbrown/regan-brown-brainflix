@@ -3,9 +3,9 @@
 @use "/src/styles/partials/typography";
 
 .login {
-  width: 20%;
   display: flex;
   justify-content: center;
+  margin: $mobile-padding-half 0;
 
   &__profile {
     width: $image-mobile;
@@ -15,5 +15,15 @@
     background-image: url("/src/assets/Images/Mohan-muruge.jpg");
     background-position: center;
     background-size: cover;
+  }
+
+  @include breakpoint-tablet {
+    width: 10%;
+    order: 2;
+    margin: 0;
+    &__profile {
+      width: $image-desktop;
+      height: $image-desktop;
+    }
   }
 }

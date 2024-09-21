@@ -27,4 +27,14 @@
   &__title {
     @include subheader-mobile;
   }
+
+  @include breakpoint-tablet {
+    &__left {
+      width: 20%;
+    }
+
+    &__title {
+      @include subheader-desktop;
+    }
+  }
 }

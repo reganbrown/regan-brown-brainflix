@@ -4,12 +4,26 @@
 
 .header {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
   margin: $mobile-padding-standard;
 
-  &__middle {
+  &__content {
     display: flex;
-    width: $full;
-    padding: $mobile-padding-standard 0;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @include breakpoint-tablet {
+    justify-content: space-between;
+    align-items: center;
+
+    &__content {
+      width: 70%;
+      display: flex;
+      justify-content: space-between;
+    }
   }
 }

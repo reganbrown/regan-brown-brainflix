@@ -9,11 +9,11 @@ export default function Header() {
     <>
       <div className="header">
         <Logo />
-        <div className="header__middle">
+        <div className="header__content">
           <Search />
           <Login />
+          <Button text="UPLOAD" classChoice="button__upload" />
         </div>
-        <Button text="UPLOAD" classChoice="button__upload" />
       </div>
     </>
   );
