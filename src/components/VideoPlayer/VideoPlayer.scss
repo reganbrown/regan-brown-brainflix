@@ -3,97 +3,15 @@
 @use "/src/styles/partials/typography";
 
 .player {
-  max-width: $full;
-}
-
-.details {
-  display: flex;
-  flex-wrap: wrap;
-  @include divider;
-  padding: $mobile-padding-standard;
-
-  &__header {
-    @include divider;
-    @include page-header-mobile;
-    padding: $mobile-padding-standard;
-  }
-
-  &__left {
-    width: 50%;
-  }
-
-  &__right {
-    width: 50%;
-  }
-
-  &__channel {
-    @include subheader-mobile;
-    padding-bottom: $mobile-padding-standard;
-  }
-  &__views {
-    font-size: 13px;
-    color: $Silver;
-    display: flex;
-    align-items: center;
-    padding-bottom: $mobile-padding-standard;
-  }
-  &__date {
-    font-size: 13px;
-    color: $Silver;
-  }
-  &__likes {
-    font-size: 13px;
-    color: $Silver;
-    display: flex;
-    align-items: center;
-  }
-  &__icon {
-    margin-right: $mobile-padding-half;
-  }
-  &__description {
-    @include body-copy-mobile;
-    padding: $mobile-padding-standard;
-  }
-  &__comments {
-    @include subheader-mobile;
-    padding: 0 $mobile-padding-standard;
-  }
+  width: $full;
+  background-color: $BrainFlix-DarkBlack;
+  aspect-ratio: 16 /9;
 
   @include breakpoint-tablet {
-    padding: $mobile-padding-standard $desktop-padding-standard;
+    height: 50vw;
+  }
 
-    &__header {
-      @include page-header-desktop;
-      padding: $desktop-padding-standard;
-      border-bottom: none;
-      padding-bottom: 0;
-    }
-
-    &__right {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-    }
-    &__left {
-      display: flex;
-      align-items: center;
-    }
-    &__views {
-      padding-bottom: 0;
-      padding-right: $mobile-padding-standard;
-    }
-    &__channel {
-      @include subheader-desktop;
-      padding-bottom: 0;
-      padding-right: $mobile-padding-standard;
-    }
-    &__description {
-      padding: $mobile-padding-standard $desktop-padding-standard;
-      @include body-copy-desktop;
-    }
-    &__comments {
-      @include subheader-desktop;
-      padding: 0 $desktop-padding-standard;
-    }
+  @include breakpoint-desktop {
+    height: 35vw;
   }
 }

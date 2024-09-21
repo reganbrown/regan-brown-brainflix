@@ -1,0 +1,23 @@
+@use "/src/styles/partials/variables" as *;
+@use "/src/styles/partials/mixins" as *;
+@use "/src/styles/partials/typography";
+
+.body__wrapper {
+  @include breakpoint-desktop {
+    display: flex;
+    margin: auto;
+    max-width: $max-width-desktop;
+  }
+}
+.body__wrapper-left {
+  @include breakpoint-desktop {
+    width: 60%;
+  }
+}
+
+.body__wrapper-right {
+  @include breakpoint-desktop {
+    width: 40%;
+    border-left: 0.0625rem solid $Mercury;
+  }
+}

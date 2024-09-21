@@ -7,7 +7,7 @@ $BrainFlix-DarkBlue: #0065ad;
 $Mercury: #e1e1e1;
 $Alabaster: #fafafa;
 
-$breakpoint-desktop: 1280px;
+$desktop-screen: 1280px;
 $tablet-screen: 768px;
 
 $mobile-padding-half: 8px;
@@ -25,3 +25,8 @@ $rounded-corner: 4px;
 
 $image-mobile: 36px;
 $image-desktop: 40px;
+
+// I know the style guide shows a max width on desktop content of
+// 1020px but to match the mockup better I made the decision to change
+// this to 1200px
+$max-width-desktop: 1200px;

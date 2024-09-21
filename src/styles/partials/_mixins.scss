@@ -82,3 +82,9 @@
     @content;
   }
 }
+
+@mixin breakpoint-desktop {
+  @media (min-width: $desktop-screen) {
+    @content;
+  }
+}

@@ -37,4 +37,10 @@
       @include subheader-desktop;
     }
   }
+
+  @include breakpoint-desktop {
+    &__left {
+      width: 30%;
+    }
+  }
 }

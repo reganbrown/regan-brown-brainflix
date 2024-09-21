@@ -84,4 +84,8 @@
       height: $image-desktop;
     }
   }
+
+  @include breakpoint-desktop {
+    padding-left: 0;
+  }
 }
