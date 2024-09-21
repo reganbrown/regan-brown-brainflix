@@ -5,7 +5,7 @@
 .player {
   width: $full;
   background-color: $BrainFlix-DarkBlack;
-  aspect-ratio: 16 /9;
+  aspect-ratio: 16 / 9;
 
   @include breakpoint-tablet {
     height: 50vw;
