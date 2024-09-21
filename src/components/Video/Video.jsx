@@ -13,7 +13,7 @@ export default function Video({ video, handleVideoID }) {
       }}
     >
       <div className="video__left">
-        <img src={video.image} className="video__image" />
+        <img src={video.image} alt={video.title} className="video__image" />
       </div>
       <div className="video__right">
         <div className="video__title">{video.title} </div>
