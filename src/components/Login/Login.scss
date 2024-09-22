@@ -5,7 +5,7 @@
 .login {
   display: flex;
   justify-content: center;
-  margin: $mobile-padding-half 0;
+  margin: $mobile-padding-half $none;
 
   &__profile {
     width: $image-mobile;
@@ -20,7 +20,7 @@
   @include breakpoint-tablet {
     width: 10%;
     order: 2;
-    margin: 0;
+    margin: $none;
     &__profile {
       width: $image-desktop;
       height: $image-desktop;

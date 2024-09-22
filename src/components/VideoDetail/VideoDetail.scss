@@ -15,11 +15,11 @@
   }
 
   &__left {
-    width: 50%;
+    width: $half;
   }
 
   &__right {
-    width: 50%;
+    width: $half;
   }
 
   &__channel {
@@ -62,7 +62,7 @@
       @include page-header-desktop;
       padding: $desktop-padding-standard;
       border-bottom: none;
-      padding-bottom: 0;
+      padding-bottom: $none;
     }
 
     &__right {
@@ -75,12 +75,12 @@
       align-items: center;
     }
     &__views {
-      padding-bottom: 0;
+      padding-bottom: $none;
       padding-right: $mobile-padding-standard;
     }
     &__channel {
       @include subheader-desktop;
-      padding-bottom: 0;
+      padding-bottom: $none;
       padding-right: $mobile-padding-standard;
     }
     &__description {
@@ -89,23 +89,23 @@
     }
     &__comments {
       @include subheader-desktop;
-      padding: 0 $desktop-padding-standard;
+      padding: $none $desktop-padding-standard;
     }
   }
 
   @include breakpoint-desktop {
-    padding-left: 0;
+    padding-left: $none;
 
     &__header {
-      padding-left: 0;
+      padding-left: $none;
     }
 
     &__description {
-      padding-left: 0;
+      padding-left: $none;
     }
 
     &__comments {
-      padding-left: 0;
+      padding-left: $none;
     }
   }
 }

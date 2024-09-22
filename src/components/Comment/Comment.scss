@@ -56,6 +56,6 @@
   }
 
   @include breakpoint-desktop {
-    padding-left: 0;
+    padding-left: $none;
   }
 }

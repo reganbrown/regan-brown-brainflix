@@ -18,25 +18,27 @@
     background-color: $BrainFlix-DarkBlue;
     cursor: pointer;
   }
-}
 
-.button__upload {
-  @extend .button;
-  background-image: url("../../assets/Icons/upload.svg");
-
-  @include breakpoint-tablet {
-    margin-top: 0;
-    width: 150px;
+  &__upload {
+    @extend .button;
+    background-image: url("../../assets/Icons/upload.svg");
   }
-}
 
-.button__comment {
-  @extend .button;
-  margin-top: $mobile-padding-standard;
-  background-image: url("../../assets/Icons/add_comment.svg");
+  &__comment {
+    @extend .button;
+    margin-top: $mobile-padding-standard;
+    background-image: url("../../assets/Icons/add_comment.svg");
+  }
 
   @include breakpoint-tablet {
-    margin-top: 0;
-    width: 150px;
+    &__upload {
+      margin-top: $none;
+      width: 150px;
+    }
+
+    &__comment {
+      margin-top: $none;
+      width: 150px;
+    }
   }
 }

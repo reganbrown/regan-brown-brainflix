@@ -5,7 +5,7 @@
 .search {
   &__form {
     width: calc(98% - 40px);
-    margin: $mobile-padding-half 0;
+    margin: $mobile-padding-half $none;
   }
 
   &__bar {
@@ -27,8 +27,12 @@
 
   @include breakpoint-tablet {
     &__form {
-      margin: 0;
+      margin: $none;
       width: 55%;
+    }
+
+    &__bar {
+      height: 40px;
     }
   }
 }

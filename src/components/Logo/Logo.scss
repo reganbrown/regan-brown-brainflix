@@ -4,7 +4,7 @@
 
 .brainflix-logo {
   height: 25px;
-  width: 100%;
+  width: $full;
 
   @include breakpoint-tablet {
     width: 20%;

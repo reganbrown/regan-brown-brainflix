@@ -72,11 +72,11 @@
     }
     &__comment {
       width: calc(98% - 150px);
-      min-height: 0;
+      min-height: $none;
       height: 45px;
     }
     &__wrapper {
-      padding: 0;
+      padding: $none;
     }
 
     &__image {
@@ -86,6 +86,6 @@
   }
 
   @include breakpoint-desktop {
-    padding-left: 0;
+    padding-left: $none;
   }
 }
