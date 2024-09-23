@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import videoDetails from "../../data/video-details.json";
 import VideoPlayer from "../../components/VideoPlayer/VideoPlayer";
 import VideoComments from "../../components/VideoComments/VideoComments";
@@ -6,8 +6,10 @@ import CommentForm from "../../components/CommentForm/CommentForm";
 import NextVideos from "../../components/NextVideos/NextVideos";
 import VideoDetail from "../../components/VideoDetail/VideoDetail";
 import "./HomePage.scss";
+import axios from "axios";
 
 export default function HomePage() {
+  let apiKey = "2bafa04d-2fe9-47a1-91e1-b50a0d776e9c";
   // passes to list of videos to update current video and list on click handler
   function handleVideoID(video) {
     setVideo(video);
@@ -18,15 +20,32 @@ export default function HomePage() {
   }
 
   // set first video
-  let [video, setVideo] = useState(videoDetails[0]);
-
-  // create starting list of videos minus first video
-  let startingVideos = videoDetails.filter((item) => {
-    return item != video;
-  });
+  let [video, setVideo] = useState(null);
 
   // set video list using starting list
-  let [videoList, setVideoList] = useState(startingVideos);
+  let [videoList, setVideoList] = useState([]);
+
+  useEffect(() => {
+    let getVideos = async () => {
+      let results = await axios.get(
+        `https://unit-3-project-api-0a5620414506.herokuapp.com/videos/?api_key=${apiKey}`
+      );
+      setVideoList(results.data);
+      getVideo(results.data[0].id);
+    };
+
+    let getVideo = async (id) => {
+      let results = await axios.get(
+        `https://unit-3-project-api-0a5620414506.herokuapp.com/videos/${id}/?api_key=${apiKey}`
+      );
+      setVideo(results.data);
+    };
+    getVideos();
+  }, []);
+
+  if (video === null) {
+    return <h1>loading...</h1>;
+  }
 
   return (
     <>

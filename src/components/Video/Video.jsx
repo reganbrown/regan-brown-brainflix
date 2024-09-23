@@ -2,6 +2,7 @@ import "./Video.scss";
 
 export default function Video({ video, handleVideoID }) {
   function clickHandler() {
+    console.log(video);
     handleVideoID(video);
   }
 
