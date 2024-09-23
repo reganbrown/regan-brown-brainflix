@@ -1,13 +1,13 @@
 import { useState } from "react";
 import videoDetails from "../../data/video-details.json";
-import VideoPlayer from "../VideoPlayer/VideoPlayer";
-import VideoComments from "../VideoComments/VideoComments";
-import CommentForm from "../CommentForm/CommentForm";
-import NextVideos from "../NextVideos/NextVideos";
-import VideoDetail from "../VideoDetail/VideoDetail";
-import "./Body.scss";
+import VideoPlayer from "../../components/VideoPlayer/VideoPlayer";
+import VideoComments from "../../components/VideoComments/VideoComments";
+import CommentForm from "../../components/CommentForm/CommentForm";
+import NextVideos from "../../components/NextVideos/NextVideos";
+import VideoDetail from "../../components/VideoDetail/VideoDetail";
+import "./HomePage.scss";
 
-export default function Body() {
+export default function HomePage() {
   // passes to list of videos to update current video and list on click handler
   function handleVideoID(video) {
     setVideo(video);
