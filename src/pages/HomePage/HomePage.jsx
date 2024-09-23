@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import videoDetails from "../../data/video-details.json";
 import VideoPlayer from "../../components/VideoPlayer/VideoPlayer";
 import VideoComments from "../../components/VideoComments/VideoComments";
 import CommentForm from "../../components/CommentForm/CommentForm";
@@ -11,12 +10,20 @@ import axios from "axios";
 export default function HomePage() {
   let apiKey = "2bafa04d-2fe9-47a1-91e1-b50a0d776e9c";
   // passes to list of videos to update current video and list on click handler
-  function handleVideoID(video) {
-    setVideo(video);
-    let restVideos = videoDetails.filter((item) => {
-      return item !== video;
-    });
-    setVideoList(restVideos);
+
+  // takes an id, does an axios call for the full details of that video by id,
+  // updates the useState setVideo to the results
+  const getCurrentVideo = async (id) => {
+    let results = await axios.get(
+      `https://unit-3-project-api-0a5620414506.herokuapp.com/videos/${id}/?api_key=${apiKey}`
+    );
+    setVideo(results.data);
+  };
+
+  // click handler for when you click a video in the next videos list
+  // calls getCurrentVideo with the id of the chosen video
+  async function handleVideoID(videoID) {
+    await getCurrentVideo(videoID);
   }
 
   // set first video
@@ -26,21 +33,16 @@ export default function HomePage() {
   let [videoList, setVideoList] = useState([]);
 
   useEffect(() => {
-    let getVideos = async () => {
+    let getData = async () => {
       let results = await axios.get(
         `https://unit-3-project-api-0a5620414506.herokuapp.com/videos/?api_key=${apiKey}`
       );
+
+      await getCurrentVideo(results.data[0].id);
       setVideoList(results.data);
-      getVideo(results.data[0].id);
     };
 
-    let getVideo = async (id) => {
-      let results = await axios.get(
-        `https://unit-3-project-api-0a5620414506.herokuapp.com/videos/${id}/?api_key=${apiKey}`
-      );
-      setVideo(results.data);
-    };
-    getVideos();
+    getData();
   }, []);
 
   if (video === null) {
@@ -57,7 +59,11 @@ export default function HomePage() {
           <VideoComments video={video} />
         </div>
         <div className="body__wrapper-right">
-          <NextVideos videoDetails={videoList} handleVideoID={handleVideoID} />
+          <NextVideos
+            videoList={videoList}
+            handleVideoID={handleVideoID}
+            currentVideo={video.id}
+          />
         </div>
       </div>
     </>
