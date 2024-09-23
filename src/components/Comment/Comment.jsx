@@ -3,7 +3,7 @@ import TimeConvert from "../../utilities/TimeConvert/TimeConvert";
 
 export default function Comment({ name, date, comment }) {
   return (
-    <div className="comment">
+    <article className="comment">
       <div className="comment__wrapper-left">
         <div className="comment__image"></div>
       </div>
@@ -12,6 +12,6 @@ export default function Comment({ name, date, comment }) {
         <div className="comment__date">{TimeConvert(date)}</div>
         <div className="comment__content">{comment}</div>
       </div>
-    </div>
+    </article>
   );
 }

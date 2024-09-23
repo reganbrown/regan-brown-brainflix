@@ -13,7 +13,7 @@ export default function VideoDetail({ video }) {
   return (
     <>
       <h1 className="details__header">{videoTitle}</h1>
-      <div className="details">
+      <section className="details">
         <div className="details__left">
           <div className="details__channel">By {channel}</div>
           <div className="details__date">{date}</div>
@@ -29,7 +29,7 @@ export default function VideoDetail({ video }) {
             {likes}
           </div>
         </div>
-      </div>
+      </section>
       <div className="details__description">{description}</div>
       <div className="details__comments">{video.comments.length} Comments</div>
     </>
