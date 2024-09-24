@@ -5,7 +5,7 @@ import VideoComments from "../VideoComments/VideoComments";
 import NextVideos from "../NextVideos/NextVideos";
 import "./Body.scss";
 
-export default function Body({ video, videoList, handleVideoID }) {
+export default function Body({ video, videoList }) {
   return (
     <>
       <VideoPlayer video={video} />
@@ -16,11 +16,7 @@ export default function Body({ video, videoList, handleVideoID }) {
           <VideoComments video={video} />
         </div>
         <div className="body__wrapper-right">
-          <NextVideos
-            videoList={videoList}
-            handleVideoID={handleVideoID}
-            currentVideo={video.id}
-          />
+          <NextVideos videoList={videoList} currentVideo={video.id} />
         </div>
       </div>
     </>

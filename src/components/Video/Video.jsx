@@ -1,17 +1,9 @@
 import "./Video.scss";
+import { Link } from "react-router-dom";
 
-export default function Video({ video, handleVideoID }) {
-  function clickHandler() {
-    handleVideoID(video.id);
-  }
-
+export default function Video({ video }) {
   return (
-    <a
-      className="video"
-      onClick={() => {
-        clickHandler();
-      }}
-    >
+    <Link className="video" to={`/id/${video.id}`}>
       <div className="video__left">
         <img src={video.image} alt={video.title} className="video__image" />
       </div>
@@ -19,6 +11,6 @@ export default function Video({ video, handleVideoID }) {
         <div className="video__title">{video.title} </div>
         <div className="video__channel">{video.channel}</div>
       </div>
-    </a>
+    </Link>
   );
 }

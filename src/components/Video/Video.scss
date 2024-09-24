@@ -6,6 +6,8 @@
   width: $full;
   display: flex;
   padding-bottom: $mobile-padding-standard;
+  text-decoration: none;
+  color: black;
 
   &__image {
     background-color: $Mercury;

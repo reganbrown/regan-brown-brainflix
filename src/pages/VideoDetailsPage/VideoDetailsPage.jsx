@@ -10,21 +10,17 @@ export default function VideoDetailsPage({ apiKey }) {
   let [video, setVideo] = useState(null);
   let [videoList, setVideoList] = useState([]);
 
-  async function handleVideoID(videoID) {
-    navigate(`/id/${videoID}`);
-  }
-
   let getVideosData = async () => {
     try {
-      let results = await axios.get(
+      let { data } = await axios.get(
         `https://unit-3-project-api-0a5620414506.herokuapp.com/videos/?api_key=${apiKey}`
       );
       if (params.id === undefined) {
-        getCurrentVideo(results.data[0].id);
+        getCurrentVideo(data[0].id);
       } else {
         getCurrentVideo(params.id);
       }
-      setVideoList(results.data);
+      setVideoList(data);
     } catch (error) {
       navigate("/404");
     }
@@ -32,10 +28,10 @@ export default function VideoDetailsPage({ apiKey }) {
 
   const getCurrentVideo = async (id) => {
     try {
-      let results = await axios.get(
+      let { data } = await axios.get(
         `https://unit-3-project-api-0a5620414506.herokuapp.com/videos/${id}/?api_key=${apiKey}`
       );
-      setVideo(results.data);
+      setVideo(data);
     } catch (error) {
       navigate("/404");
     }
@@ -51,7 +47,7 @@ export default function VideoDetailsPage({ apiKey }) {
 
   return (
     <>
-      <Body video={video} videoList={videoList} handleVideoID={handleVideoID} />
+      <Body video={video} videoList={videoList} />
     </>
   );
 }
