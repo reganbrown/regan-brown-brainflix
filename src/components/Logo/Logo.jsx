@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export default function Logo() {
   return (
-    <div className="brainflix-logo">
+    <div className="logo-holder">
       <Link to="/">
         <img
           src={BrainFlixLogo}

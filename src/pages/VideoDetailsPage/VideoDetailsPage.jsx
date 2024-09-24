@@ -15,7 +15,7 @@ export default function VideoDetailsPage({ apiKey }) {
       );
       setVideo(results.data);
     } catch (error) {
-      console.log(error);
+      navigate("/404");
     }
   };
 
@@ -41,7 +41,7 @@ export default function VideoDetailsPage({ apiKey }) {
         }
         setVideoList(results.data);
       } catch (error) {
-        console.log(error);
+        navigate("/404");
       }
     };
 
