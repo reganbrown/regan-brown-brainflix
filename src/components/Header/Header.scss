@@ -33,3 +33,12 @@
     margin: $desktop-padding-standard auto;
   }
 }
+
+.link {
+  width: 100%;
+
+  @include breakpoint-tablet {
+    margin-top: $none;
+    width: 150px;
+  }
+}
