@@ -5,15 +5,15 @@ import VideoComments from "../VideoComments/VideoComments";
 import NextVideos from "../NextVideos/NextVideos";
 import "./Body.scss";
 
-export default function Body({ video, videoList }) {
+export default function Body({ video, videoList, postComment, deleteComment }) {
   return (
     <>
       <VideoPlayer video={video} />
       <div className="body__wrapper">
         <div className="body__wrapper-left">
           <VideoDetail video={video} />
-          <CommentForm />
-          <VideoComments video={video} />
+          <CommentForm currentVideo={video.id} postComment={postComment} />
+          <VideoComments video={video} deleteComment={deleteComment} />
         </div>
         <div className="body__wrapper-right">
           <NextVideos videoList={videoList} currentVideo={video.id} />

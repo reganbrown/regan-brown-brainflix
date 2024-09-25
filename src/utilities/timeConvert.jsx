@@ -1,4 +1,4 @@
-export default function TimeConvert(ms) {
+export default function timeConvert(ms) {
   const date = new Date(ms);
 
   let day = date.getDate();

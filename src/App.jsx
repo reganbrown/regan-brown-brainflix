@@ -5,18 +5,13 @@ import VideoDetailsPage from "./pages/VideoDetailsPage/VideoDetailsPage";
 import UploadPage from "./pages/UploadPage/UploadPage";
 
 function App() {
-  let apiKey = "2bafa04d-2fe9-47a1-91e1-b50a0d776e9c";
-
   return (
     <>
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route path="/" element={<VideoDetailsPage apiKey={apiKey} />} />
-          <Route
-            path="/id/:id"
-            element={<VideoDetailsPage apiKey={apiKey} />}
-          />
+          <Route path="/" element={<VideoDetailsPage />} />
+          <Route path="/id/:id" element={<VideoDetailsPage />} />
           <Route path="/upload" element={<UploadPage />} />
           <Route path="*" element={<h1>404 Page Not Found</h1>} />
         </Routes>

@@ -1,13 +1,13 @@
 import viewIcon from "../../assets/Icons/views.svg";
 import likesIcon from "../../assets/Icons/likes.svg";
-import TimeConvert from "../../utilities/TimeConvert/TimeConvert";
 import "./VideoDetail.scss";
+import timeConvert from "../../utilities/timeConvert";
 
 export default function VideoDetail({ video }) {
   const videoTitle = video.title;
   const channel = video.channel;
   const views = video.views;
-  const date = TimeConvert(video.timestamp);
+  const date = timeConvert(video.timestamp);
   const likes = video.likes;
   const description = video.description;
   return (

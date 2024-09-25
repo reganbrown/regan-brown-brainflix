@@ -10,24 +10,24 @@ $Alabaster: #fafafa;
 $desktop-screen: 1280px;
 $tablet-screen: 768px;
 
-$mobile-padding-half: 8px;
-$mobile-padding-standard: 16px;
-$mobile-padding-large: 24px;
-$desktop-padding-standard: 24px;
-$desktop-padding-large: 36px;
+$mobile-padding-half: 0.5rem;
+$mobile-padding-standard: 1rem;
+$mobile-padding-large: 1.5rem;
+$desktop-padding-standard: 1.5rem;
+$desktop-padding-large: 2.25rem;
 
 $full: 100%;
 $half: 50%;
 $none: 0;
 
-$button-height: 40px;
+$button-height: 2.5rem;
 
 $rounded-corner: 4px;
 
-$image-mobile: 36px;
-$image-desktop: 40px;
+$image-mobile: 2.25rem;
+$image-desktop: 2.5rem;
 
 // I know the style guide shows a max width on desktop content of
 // 1020px but to match the mockup better I made the decision to change
 // this to 1200px
-$max-width-desktop: 1200px;
+$max-width-desktop: 75rem;

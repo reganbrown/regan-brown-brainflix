@@ -3,8 +3,9 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import Body from "../../components/Body/Body";
+import { apiKey, baseURL } from "../../utilities/api";
 
-export default function VideoDetailsPage({ apiKey }) {
+export default function VideoDetailsPage() {
   let params = useParams();
   let navigate = useNavigate();
   let [video, setVideo] = useState(null);
@@ -12,9 +13,7 @@ export default function VideoDetailsPage({ apiKey }) {
 
   let getVideosData = async () => {
     try {
-      let { data } = await axios.get(
-        `https://unit-3-project-api-0a5620414506.herokuapp.com/videos/?api_key=${apiKey}`
-      );
+      let { data } = await axios.get(`${baseURL}/videos/?api_key=${apiKey}`);
       if (params.id === undefined) {
         getCurrentVideo(data[0].id);
       } else {
@@ -29,12 +28,31 @@ export default function VideoDetailsPage({ apiKey }) {
   const getCurrentVideo = async (id) => {
     try {
       let { data } = await axios.get(
-        `https://unit-3-project-api-0a5620414506.herokuapp.com/videos/${id}/?api_key=${apiKey}`
+        `${baseURL}/videos/${id}/?api_key=${apiKey}`
       );
       setVideo(data);
     } catch (error) {
       navigate("/404");
     }
+  };
+
+  const postComment = async (id, comment) => {
+    try {
+      await axios.post(
+        `${baseURL}/videos/${id}/comments/?api_key=${apiKey}`,
+        comment
+      );
+      getCurrentVideo(id);
+    } catch (error) {
+      console.log("error posting comment: ", error);
+    }
+  };
+
+  const deleteComment = async (videoID, commentID) => {
+    await axios.delete(
+      `${baseURL}/videos/${videoID}/comments/${commentID}/?api_key=${apiKey}`
+    );
+    getCurrentVideo(videoID);
   };
 
   useEffect(() => {
@@ -47,7 +65,12 @@ export default function VideoDetailsPage({ apiKey }) {
 
   return (
     <>
-      <Body video={video} videoList={videoList} />
+      <Body
+        video={video}
+        videoList={videoList}
+        postComment={postComment}
+        deleteComment={deleteComment}
+      />
     </>
   );
 }
