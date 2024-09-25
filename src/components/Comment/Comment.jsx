@@ -21,8 +21,8 @@ export default function Comment({
         <div className="comment__name">{name}</div>
         <div className="comment__date">{timeConvert(date)}</div>
         <div className="comment__content">{comment}</div>
+        <div className="comment__delete" onClick={clickHandler}></div>
       </div>
-      <button onClick={clickHandler}>delete</button>
     </article>
   );
 }

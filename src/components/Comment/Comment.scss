@@ -24,7 +24,7 @@
 
   &__content {
     padding-bottom: $mobile-padding-half;
-    width: $full;
+    width: calc(100% - 50px);
   }
   &__name {
     font-weight: 600;
@@ -41,6 +41,14 @@
     height: $image-mobile;
     border-radius: $half;
     background-color: $Mercury;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__delete {
+    width: 20px;
+    height: 20px;
+    background: url("/src/assets/Icons/delete.svg");
     background-position: center;
     background-size: cover;
   }

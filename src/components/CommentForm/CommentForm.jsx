@@ -1,14 +1,8 @@
 import "./CommentForm.scss";
 import Button from "../Button/Button";
+import { commentObject } from "../../utilities/commentObject";
 
 export default function CommentForm({ currentVideo, postComment }) {
-  class commentObject {
-    constructor(name, comment) {
-      this.name = name;
-      this.comment = comment;
-    }
-  }
-
   function addComment(event) {
     event.preventDefault();
     const form = event.target;
