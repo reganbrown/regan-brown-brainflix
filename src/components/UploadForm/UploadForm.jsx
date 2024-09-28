@@ -43,10 +43,12 @@ export default function UploadForm() {
   };
   const handleChangeTitle = (event) => {
     setTitleInput(event.target.value);
+    setTitleError(false);
   };
 
   const handleChangeDescription = (event) => {
     setDescInput(event.target.value);
+    setDescError(false);
   };
 
   return (
