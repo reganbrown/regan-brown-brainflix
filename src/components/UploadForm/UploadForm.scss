@@ -92,6 +92,7 @@
     border: 1px solid $Mercury;
     background-color: $Alabaster;
     resize: none;
+    margin-bottom: $mobile-padding-standard;
 
     &::placeholder {
       color: black;
