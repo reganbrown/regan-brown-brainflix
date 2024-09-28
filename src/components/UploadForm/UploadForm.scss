@@ -29,12 +29,38 @@
     text-align: center;
     padding-top: $desktop-padding-large;
   }
+
+  @include breakpoint-tablet {
+    padding: $desktop-padding-standard;
+    &__header {
+      @include page-header-desktop;
+      @include divider;
+      padding-bottom: $desktop-padding-standard;
+      margin-bottom: $mobile-padding-standard;
+    }
+    &__thumbnail {
+      width: 50%;
+    }
+    &__cancel {
+      padding-top: 0;
+    }
+  }
+  @include breakpoint-desktop {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: $max-width-desktop;
+    margin: auto;
+    &__thumbnail {
+      width: 100%;
+    }
+  }
 }
 
 .upload-form {
   width: $full;
 
   &__label {
+    display: block;
     @include section-header-mobile;
     font-weight: 600;
     color: $Silver;
@@ -74,6 +100,12 @@
       outline: 2px solid $BrainFlix-Blue;
     }
   }
+
+  @include breakpoint-tablet {
+    &__description {
+      margin-bottom: $mobile-padding-standard;
+    }
+  }
 }
 
 .error {
@@ -82,4 +114,40 @@
 
 .toast {
   background-color: red;
+}
+
+@include breakpoint-tablet {
+  .bottom-wrapper {
+    border-top: 1px solid $Mercury;
+    padding-top: $mobile-padding-standard;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    &__end {
+      order: 2;
+    }
+
+    &__start {
+      width: 20%;
+    }
+  }
+}
+
+@include breakpoint-desktop {
+  .top-wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    &__left {
+      width: 35%;
+    }
+    &__right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 60%;
+    }
+  }
 }

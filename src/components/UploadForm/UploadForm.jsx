@@ -52,41 +52,51 @@ export default function UploadForm() {
   return (
     <div className="upload">
       <h2 className="upload__header">Upload Video</h2>
-      <p className="upload__label">VIDEO THUMBNAIL</p>
-      <img src={videoThumbnail} className="upload__thumbnail" />
       <form className="upload-form" onSubmit={handleSubmit}>
-        <label className="upload-form__label" htmlFor="titleInput">
-          TITLE YOUR VIDEO
-        </label>
+        <div className="top-wrapper">
+          <div className="top-wrapper__left">
+            <p className="upload__label">VIDEO THUMBNAIL</p>
+            <img src={videoThumbnail} className="upload__thumbnail" />
+          </div>
+          <div className="top-wrapper__right">
+            <label className="upload-form__label" htmlFor="titleInput">
+              TITLE YOUR VIDEO
+            </label>
+            <input
+              type="text"
+              className={`upload-form__title ${titleError ? "error" : ""}`}
+              placeholder="Add a title to your video"
+              name="titleInput"
+              id="titleInput"
+              value={titleInput}
+              onChange={handleChangeTitle}
+            ></input>
 
-        <input
-          type="text"
-          className={`upload-form__title ${titleError ? "error" : ""}`}
-          placeholder="Add a title to your video"
-          name="titleInput"
-          id="titleInput"
-          value={titleInput}
-          onChange={handleChangeTitle}
-        ></input>
-
-        <label className="upload-form__label" htmlFor="titleInput">
-          ADD A VIDEO DESCRIPTION
-        </label>
-        <textarea
-          className={`upload-form__description ${descError ? "error" : ""}`}
-          placeholder="Add a description to your video"
-          name="descriptionInput"
-          onChange={handleChangeDescription}
-          value={descInput}
-        ></textarea>
+            <label className="upload-form__label" htmlFor="titleInput">
+              ADD A VIDEO DESCRIPTION
+            </label>
+            <textarea
+              className={`upload-form__description ${descError ? "error" : ""}`}
+              placeholder="Add a description to your video"
+              name="descriptionInput"
+              onChange={handleChangeDescription}
+              value={descInput}
+            ></textarea>
+          </div>
+        </div>
 
         <ToastContainer limit={3} />
-        <Button text="PUBLISH" classChoice="button__upload" />
+        <div className="bottom-wrapper">
+          <div className="bottom-wrapper__end">
+            <Button text="PUBLISH" classChoice="button__upload" />
+          </div>
+          <div className="bottom-wrapper__start">
+            <Link to="/" className="upload__link">
+              <p className="upload__cancel">CANCEL</p>
+            </Link>
+          </div>
+        </div>
       </form>
-
-      <Link to="/" className="upload__link">
-        <p className="upload__cancel">CANCEL</p>
-      </Link>
     </div>
   );
 }
