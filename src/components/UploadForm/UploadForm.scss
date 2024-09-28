@@ -1,0 +1,85 @@
+@use "/src/styles/partials/variables" as *;
+@use "/src/styles/partials/mixins" as *;
+@use "/src/styles/partials/typography";
+
+.upload {
+  border-top: 0.0625rem solid $Mercury;
+  padding: $mobile-padding-standard;
+
+  &__header {
+    @include page-header-mobile;
+    padding-bottom: $mobile-padding-standard;
+  }
+
+  &__label {
+    @include section-header-mobile;
+    font-weight: 600;
+    color: $Silver;
+  }
+  &__thumbnail {
+    width: 100%;
+    margin-bottom: $mobile-padding-standard;
+  }
+  &__link {
+    text-decoration: none;
+  }
+  &__cancel {
+    @include labels-buttons-desktop;
+    color: $BrainFlix-Blue;
+    text-align: center;
+    padding-top: $desktop-padding-large;
+  }
+}
+
+.upload-form {
+  width: $full;
+
+  &__label {
+    @include section-header-mobile;
+    font-weight: 600;
+    color: $Silver;
+  }
+
+  &__title {
+    margin-bottom: $mobile-padding-standard;
+    font-family: "AvenirNextLTPro";
+    padding: 12px;
+    width: $full;
+    border-radius: $rounded-corner;
+    border: 1px solid $Mercury;
+    background-color: $Alabaster;
+
+    &::placeholder {
+      color: black;
+    }
+    &:focus {
+      outline: 2px solid $BrainFlix-Blue;
+    }
+  }
+
+  &__description {
+    font-family: "AvenirNextLTPro";
+    min-height: 6.25rem;
+    width: $full;
+    border-radius: $rounded-corner;
+    padding: 0.75rem;
+    border: 1px solid $Mercury;
+    background-color: $Alabaster;
+    resize: none;
+
+    &::placeholder {
+      color: black;
+    }
+    &:focus {
+      outline: 2px solid $BrainFlix-Blue;
+    }
+  }
+}
+
+.error {
+  outline: 2px solid red;
+}
+
+.toast {
+  background-color: red;
+}

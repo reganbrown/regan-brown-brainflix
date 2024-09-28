@@ -49,10 +49,14 @@ export default function VideoDetailsPage() {
   };
 
   const deleteComment = async (videoID, commentID) => {
-    await axios.delete(
-      `${baseURL}/videos/${videoID}/comments/${commentID}/?api_key=${apiKey}`
-    );
-    getCurrentVideo(videoID);
+    try {
+      await axios.delete(
+        `${baseURL}/videos/${videoID}/comments/${commentID}/?api_key=${apiKey}`
+      );
+      getCurrentVideo(videoID);
+    } catch (error) {
+      console.log("error deleting comment: ", error);
+    }
   };
 
   useEffect(() => {

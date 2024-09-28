@@ -30,6 +30,12 @@
     background-image: url("../../assets/Icons/add_comment.svg");
   }
 
+  &__upload {
+    @extend .button;
+    margin-top: $mobile-padding-standard;
+    background-image: url("../../assets//Icons/upload.svg");
+  }
+
   @include breakpoint-tablet {
     &__upload {
       margin-top: $none;
