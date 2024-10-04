@@ -1,4 +1,3 @@
-import videoThumbnail from "../../assets/Images/Upload-video-preview.jpg";
 import "./UploadForm.scss";
 import Button from "../Button/Button";
 import { Link } from "react-router-dom";

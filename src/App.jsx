@@ -6,17 +6,15 @@ import UploadPage from "./pages/UploadPage/UploadPage";
 
 function App() {
   return (
-    <>
-      <BrowserRouter>
-        <Header />
-        <Routes>
-          <Route path="/" element={<VideoDetailsPage />} />
-          <Route path="/id/:id" element={<VideoDetailsPage />} />
-          <Route path="/upload" element={<UploadPage />} />
-          <Route path="*" element={<h1>404 Page Not Found</h1>} />
-        </Routes>
-      </BrowserRouter>
-    </>
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/" element={<VideoDetailsPage />} />
+        <Route path="/id/:id" element={<VideoDetailsPage />} />
+        <Route path="/upload" element={<UploadPage />} />
+        <Route path="*" element={<h1>404 Page Not Found</h1>} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
