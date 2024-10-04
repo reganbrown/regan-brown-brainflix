@@ -6,6 +6,8 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { baseURL } from "../../utilities/api";
+import axios from "axios";
 
 export default function UploadForm() {
   const [titleInput, setTitleInput] = useState("");
@@ -38,9 +40,11 @@ export default function UploadForm() {
     }
 
     if (isValid === true) {
+      postVideo();
       notifySuccess();
     }
   };
+
   const handleChangeTitle = (event) => {
     setTitleInput(event.target.value);
     setTitleError(false);
@@ -49,6 +53,23 @@ export default function UploadForm() {
   const handleChangeDescription = (event) => {
     setDescInput(event.target.value);
     setDescError(false);
+  };
+
+  let postVideo = async () => {
+    try {
+      let title = titleInput;
+      let desc = descInput;
+      let newVideo = {
+        title: title,
+        channel: "Regan Brown",
+        description: desc,
+        image:
+          "https://unit-3-project-api-0a5620414506.herokuapp.com/images/image2.jpg",
+      };
+      let results = await axios.post(`${baseURL}/videos`, newVideo);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
