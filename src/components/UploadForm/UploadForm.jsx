@@ -63,8 +63,7 @@ export default function UploadForm() {
         title: title,
         channel: "Regan Brown",
         description: desc,
-        image:
-          "https://unit-3-project-api-0a5620414506.herokuapp.com/images/image2.jpg",
+        image: "http://localhost:8080/images/Upload-video-preview.jpg",
       };
       let results = await axios.post(`${baseURL}/videos`, newVideo);
     } catch (error) {
@@ -79,7 +78,10 @@ export default function UploadForm() {
         <div className="top-wrapper">
           <div className="top-wrapper__left">
             <p className="upload__label">VIDEO THUMBNAIL</p>
-            <img src={videoThumbnail} className="upload__thumbnail" />
+            <img
+              src="http://localhost:8080/images/Upload-video-preview.jpg"
+              className="upload__thumbnail"
+            />
           </div>
           <div className="top-wrapper__right">
             <label className="upload-form__label" htmlFor="titleInput">
