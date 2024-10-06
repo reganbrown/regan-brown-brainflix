@@ -3,9 +3,9 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import Body from "../../components/Body/Body";
-import { baseURL } from "../../utilities/api";
 
 export default function VideoDetailsPage() {
+  const baseURL = import.meta.env.VITE_API_URL;
   let params = useParams();
   let navigate = useNavigate();
   let [video, setVideo] = useState(null);
